@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "521109258372",
+    "project_id": "portscout-5c9aa",
+    "storage_bucket": "portscout-5c9aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521109258372:android:6334a36cc58537b80842d1",
+        "android_client_info": {
+          "package_name": "com.example.portscout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521109258372-ojh89bl0bthneedmbk3e0v34ogcqgjv0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxF82xcLLPqaRWw4wu_Vp29R9GsxKxPxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521109258372-ojh89bl0bthneedmbk3e0v34ogcqgjv0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "521109258372-basf1o9qfbh9gbjqvju3voebcgfk4d47.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.portscout"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
