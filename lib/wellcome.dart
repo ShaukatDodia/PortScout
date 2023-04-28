@@ -40,7 +40,8 @@ class wlcm extends StatelessWidget {
                     fontFamily: 'inconsolata', fontSize: 20.00, color: Colors.white),
               ),
               SizedBox(height: 5,),
-              TextFormField(
+
+              TextFormField( controller: tex1,
                 style: TextStyle(color: Colors.white),
                 decoration: const InputDecoration(
                   fillColor: Color.fromRGBO(108, 122, 137, 0.3),
@@ -80,7 +81,7 @@ class wlcm extends StatelessWidget {
                    )
             ],
           ),
-        
+
       ],
     );
     SafeArea con = SafeArea(
