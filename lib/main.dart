@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portscout/wellcome.dart';
+import 'package:portscout/screens/onboard_screen/onboard_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,14 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'PortScout App',
-
       home: Scaffold(
         backgroundColor: Color.fromRGBO(108, 122, 137, 0.3),
-
-        body: wlcm(),
+        body: OnboardScreen(),
       ),
     );
   }
