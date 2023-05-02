@@ -13,6 +13,7 @@ Future<UserModel> getUser(String username) async {
     name: user.name,
     login: user.login,
     avatarUrl: user.avatarUrl,
+    htmlUrl: user.htmlUrl,
     bio: user.bio,
     location: user.location,
     email: user.email,
@@ -29,16 +30,24 @@ Future<RepoModel> getRepo(String username, String repoName) async {
   );
 
   RepoModel repoModel = RepoModel(
-    createdAt: DateTime.parse(repo.createdAt.toString()),
+    license: repo.license?.name ?? 'No License Specified',
     fullName: repo.fullName,
     name: repo.name,
+    description: repo.description,
     language: repo.language,
-    owner: repo.owner!.login,
+    owner: repo.owner!,
     stargazers: repo.stargazersCount.toString(),
     url: repo.htmlUrl,
   );
 
   return repoModel;
+}
+
+Future<GitHubFile> getReadme(String username, String repoName) async {
+  GitHubFile readme =
+      await github.repositories.getReadme(RepositorySlug(username, username));
+
+  return readme;
 }
 
 Future<List<RepoModel>> getAllRepos(String username) async {
@@ -48,11 +57,12 @@ Future<List<RepoModel>> getAllRepos(String username) async {
 
   for (var repo in repos) {
     RepoModel repoModel = RepoModel(
-      createdAt: DateTime.parse(repo.createdAt.toString()),
+      license: repo.license?.name ?? 'No license specified',
       fullName: repo.fullName,
       name: repo.name,
+      description: repo.description ?? '',
       language: repo.language,
-      owner: repo.owner!.login,
+      owner: repo.owner!,
       stargazers: repo.stargazersCount.toString(),
       url: repo.htmlUrl,
     );

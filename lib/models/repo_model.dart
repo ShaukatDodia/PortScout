@@ -1,16 +1,20 @@
+import 'package:github/github.dart';
+
 class RepoModel {
-  DateTime createdAt;
+  String? license;
   String fullName;
   String name;
-  String language;
-  String owner;
+  String description;
+  String? language;
+  UserInformation owner;
   String stargazers;
   String url;
 
   RepoModel({
-    required this.createdAt,
+    required this.license,
     required this.fullName,
     required this.name,
+    required this.description,
     required this.language,
     required this.owner,
     required this.stargazers,

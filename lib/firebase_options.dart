@@ -58,7 +58,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCxF82xcLLPqaRWw4wu_Vp29R9GsxKxPxk',
-    appId: '1:521109258372:android:6334a36cc58537b80842d1',
+    appId: '1:521109258372:android:833b76b0c515de3c0842d1',
     messagingSenderId: '521109258372',
     projectId: 'portscout-5c9aa',
     storageBucket: 'portscout-5c9aa.appspot.com',

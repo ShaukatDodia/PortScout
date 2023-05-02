@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portscout/screens/home_screen/home_screen.dart';
 import 'package:portscout/services/user_data.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class OnboardScreen extends StatelessWidget {
   const OnboardScreen({Key? key}) : super(key: key);
@@ -23,7 +22,7 @@ class OnboardScreen extends StatelessWidget {
           ),
         ),
         const Text(
-          'to PortScout Cummunity',
+          'to PortScout Community',
           style: TextStyle(
               fontSize: 26,
               fontFamily: 'inconsolata',
@@ -75,7 +74,7 @@ class OnboardScreen extends StatelessWidget {
                   // set username in shared preferences
                   UserData.setUserName(usernameController.text);
 
-                  Navigator.pushReplacement(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => const HomeScreen(),
@@ -98,7 +97,7 @@ class OnboardScreen extends StatelessWidget {
     SafeArea con = SafeArea(
       child: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             top: 100,
             right: 20,
             left: 20,
