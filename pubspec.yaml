@@ -41,7 +41,7 @@ dependencies:
   dart_markdown: ^3.1.5
   flutter_super_html_viewer: ^0.1.0
   flutter_octicons: ^0.31.0
-  libv_markdown: ^1.0.2
+  # libv_markdown: ^1.0.2
   cloud_firestore: ^4.5.3
 
 dev_dependencies:

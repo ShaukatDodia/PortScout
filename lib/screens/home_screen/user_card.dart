@@ -7,32 +7,32 @@ import 'package:url_launcher/url_launcher.dart';
 // import 'package:flutter_super_html_viewer/flutter_super_html_viewer.dart';
 import 'package:dart_markdown/dart_markdown.dart' hide Text;
 // ignore: import_of_legacy_library_into_null_safe
-import 'package:libv_markdown/libv_markdown.dart';
+// import 'package:libv_markdown/libv_markdown.dart';
 import 'package:portscout/models/firebase_user_model.dart';
 
 class UserCard extends StatelessWidget {
   final UserModel userModel;
-  final String? profileMarkdown;
+  // final String? profileMarkdown;
 
   const UserCard({
     Key? key,
     required this.userModel,
-    this.profileMarkdown,
+    // this.profileMarkdown,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    String md = profileMarkdown ?? '';
+    // String md = profileMarkdown ?? '';
 
-    final markdown = Markdown(
-      enableSubscript: true,
-      enableSuperscript: true,
-      enableHighlight: true,
-    );
+    // final markdown = Markdown(
+    //   enableSubscript: true,
+    //   enableSuperscript: true,
+    //   enableHighlight: true,
+    // );
 
-    final nodes = markdown.parse(md);
+    // final nodes = markdown.parse(md);
 
-    final html = nodes.toHtml();
+    // final html = nodes.toHtml();
 
     return SizedBox(
       width: MediaQuery.of(context).size.width,
@@ -199,28 +199,28 @@ class UserCard extends StatelessWidget {
               const SizedBox(height: 8),
               const FirebaseUserCard(),
               const SizedBox(height: 16),
-              //  render special repository (readme) for user
-              html.isNotEmpty
-                  // ? SingleChildScrollView(
-                  //     child: ClipRRect(
-                  //       borderRadius: BorderRadius.circular(10.0),
-                  //       child: HtmlContentViewer(
-                  //         htmlContent: html,
-                  //       ),
-                  //     ),
-                  //   )
-                  ? SingleChildScrollView(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10.0),
-                        child: MarkdownView(
-                          markdownViewHTML: profileMarkdown,
-                          loadingWidget: const Center(
-                            child: CircularProgressIndicator(),
-                          ),
-                        ),
-                      ),
-                    )
-                  : const SizedBox(height: 8),
+              // //  render special repository (readme) for user
+              // html.isNotEmpty
+              //     // ? SingleChildScrollView(
+              //     //     child: ClipRRect(
+              //     //       borderRadius: BorderRadius.circular(10.0),
+              //     //       child: HtmlContentViewer(
+              //     //         htmlContent: html,
+              //     //       ),
+              //     //     ),
+              //     //   )
+              //     ? SingleChildScrollView(
+              //         child: ClipRRect(
+              //           borderRadius: BorderRadius.circular(10.0),
+              //           child: MarkdownView(
+              //             markdownViewHTML: profileMarkdown,
+              //             loadingWidget: const Center(
+              //               child: CircularProgressIndicator(),
+              //             ),
+              //           ),
+              //         ),
+              //       )
+              //     : const SizedBox(height: 8),
             ],
           ),
         ),

@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
           SliverToBoxAdapter(
             child: UserCard(
               userModel: userModel,
-              profileMarkdown: readme.text,
+              // profileMarkdown: readme.text,
             ),
           ),
           SliverList(
